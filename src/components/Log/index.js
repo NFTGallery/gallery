@@ -30,16 +30,16 @@ export default class Log extends React.Component {
       maker: this.state.onlyByMe ? accountAddress : undefined,
       owner: this.state.onlyForMe ? accountAddress : undefined,
       side: this.state.side,
-      bundled: this.state.onlyBundles ? true : undefined
+      bundled: this.state.onlyBundles ? true : undefined,
       // Possible query options:
       // 'asset_contract_address'
       // 'taker'
       // 'token_id'
       // 'token_ids'
       // 'sale_kind'
-      
+      collection_slug: 'candygallery'
+      // asset_contract_address: '0x5ee7ddcd6d86e86e4777790c0c89c0332bf0411e'
     }, this.state.page)
-
     this.setState({ orders, total: count })
   }
 
