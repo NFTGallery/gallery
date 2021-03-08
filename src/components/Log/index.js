@@ -37,7 +37,7 @@ export default class Log extends React.Component {
       // 'token_id'
       // 'token_ids'
       // 'sale_kind'
-      collection_slug: 'candygallery'
+      collection_slug: 'generic-rockbands'
       // asset_contract_address: '0x5ee7ddcd6d86e86e4777790c0c89c0332bf0411e'
     }, this.state.page)
     this.setState({ orders, total: count })

@@ -22,6 +22,7 @@ export default class App extends React.Component {
     })
     this.web3 = this.seaport.web3
     this.web3.eth.getAccounts((err, res) => {
+      console.log(res);
       this.setState({
         accountAddress: res[0]
       })
@@ -32,7 +33,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header>
-          <nav>
+        {/*<nav>
             <ul id="desktop-tab-1">
               <li><a href="/about.html" class="selected">HOME</a></li>
               <li><a href="/about.html" class="selected">MASTERPIECES</a></li>
@@ -50,9 +51,22 @@ export default class App extends React.Component {
               <li><a href="/about.html" class="selected">WISHLIST</a></li>
               <li><a href="/about.html" class="selected">FAQ</a></li>
             </ul>    
+          </nav>*/}
+        {/* One Row Menu */}
+          <nav>
+            <ul>
+              <li><a href="/about.html" class="selected">HOME</a></li>
+              <li><a href="/about.html" class="selected">MASTERPIECES</a></li>
+              <li><a href="/about.html" class="selected">CREATORS</a></li>
+              <li><a href="/about.html" class="selected">BUYERS</a></li>
+            </ul>
           </nav>
-        </Header>
+          </Header>
         <main>
+          <div class="middle-block">
+            <h3 class="nft-band">ROCK BAND NFT DROP</h3>
+            <span>Welcome to our NFT Store. We're excited to share this drop with you. Continue down below for auctions and further video info on our NFTs....</span>
+          </div>
           <Log
             seaport={this.seaport}
             accountAddress={this.state.accountAddress} />
@@ -83,7 +97,7 @@ const Header = styled.header`
 
   nav > ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0;
     padding: 0;
     list-style: none;
